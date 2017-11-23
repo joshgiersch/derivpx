@@ -10,6 +10,3 @@ def fxoptionprice(s, k, rf, rd, vol, t, iscall):
     else:
         price = k * math.exp(-rd * t) * norm.cdf(-d2) - s * math.exp(-rf * t) * norm.cdf(-d1)
     return price
-
-
-print(fxoptionprice(60,65,0,0.08,0.3,0.25,True))
